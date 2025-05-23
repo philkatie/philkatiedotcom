@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import { SkillPill } from "../SkillPill";
 
 export const Projects = () => {
     return <section id ="projects" className="min-h-screen flex items-center justify-center py-20">
@@ -16,13 +17,7 @@ export const Projects = () => {
                         <p className="text-gray-400 mb-4">Project 1 Description</p>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["React", "Node.js", "AWS", "Docker"].map((tech, key) => (
-                                <span 
-                                    key={key}  
-                                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm 
-                                    hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
-                                >
-                                    {tech}
-                                </span>
+                                <SkillPill skill={tech} key={key} />
                             ))}
                         </div>
                         <div className="flex justify-between items-center">
@@ -37,13 +32,7 @@ export const Projects = () => {
                         <p className="text-gray-400 mb-4">Project 2 Description</p>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["React", "Node.js", "AWS", "Bootstrap"].map((tech, key) => (
-                                <span 
-                                    key={key}  
-                                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm 
-                                    hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
-                                >
-                                    {tech}
-                                </span>
+                                <SkillPill skill={tech} key={key} />
                             ))}
                         </div>
                         <div className="flex justify-between items-center">
